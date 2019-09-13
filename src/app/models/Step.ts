@@ -9,6 +9,10 @@ class Step extends Model {
 
   public tournament_id!: number;
 
+  public tournament!: {
+    name: string;
+  };
+
   public readonly created_at!: Date;
 
   public readonly updated_at!: Date;
@@ -24,6 +28,6 @@ Step.init(
   }
 );
 
-Step.belongsTo(Tournament, { foreignKey: 'tournament_id' });
+Step.belongsTo(Tournament, { foreignKey: 'tournament_id', as: 'tournament' });
 
 export default Step;
