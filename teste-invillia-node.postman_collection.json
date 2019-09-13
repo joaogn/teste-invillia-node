@@ -1,0 +1,342 @@
+{
+	"info": {
+		"_postman_id": "b41044d3-c272-41b4-a2e0-a7f7e28cd8e8",
+		"name": "teste-invillia-node",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\":\"Joao3\",\n\t\"email\":\"joao3@gmail.com\",\n\t\"password\":\"123456\"\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/users",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Index",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiaWF0IjoxNTY2MzUzMzc3LCJleHAiOjE1NjY5NTgxNzd9.EKfmpCmGOaWywlarUNU6y94ShO37PuaVMzE01FOBQ58",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/users",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Tournaments",
+			"item": [
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\":\"Torneio Invillia\"\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/tournaments",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"tournaments"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Index",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiaWF0IjoxNTY2MzUzMzc3LCJleHAiOjE1NjY5NTgxNzd9.EKfmpCmGOaWywlarUNU6y94ShO37PuaVMzE01FOBQ58",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/tournaments",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"tournaments"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Steps",
+			"item": [
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\":\"Etapa 2\",\n\t\"tournament_id\": 1\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/steps",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"steps"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Index",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiaWF0IjoxNTY2MzUzMzc3LCJleHAiOjE1NjY5NTgxNzd9.EKfmpCmGOaWywlarUNU6y94ShO37PuaVMzE01FOBQ58",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/steps/:tournamentId",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"steps",
+								":tournamentId"
+							],
+							"variable": [
+								{
+									"key": "tournamentId",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Positions",
+			"item": [
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"user_id\": 3,\n\t\"step_id\": 2,\n\t\"position\": 3\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/positions",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"positions"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "StepRank",
+			"item": [
+				{
+					"name": "Index",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiaWF0IjoxNTY2MzUzMzc3LCJleHAiOjE1NjY5NTgxNzd9.EKfmpCmGOaWywlarUNU6y94ShO37PuaVMzE01FOBQ58",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/steprank/:stepId",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"steprank",
+								":stepId"
+							],
+							"variable": [
+								{
+									"key": "stepId",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "TournamentRank",
+			"item": [
+				{
+					"name": "Index",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiaWF0IjoxNTY2MzUzMzc3LCJleHAiOjE1NjY5NTgxNzd9.EKfmpCmGOaWywlarUNU6y94ShO37PuaVMzE01FOBQ58",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/tournamentrank/:tournamentId",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"tournamentrank",
+								":tournamentId"
+							],
+							"variable": [
+								{
+									"key": "tournamentId",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
