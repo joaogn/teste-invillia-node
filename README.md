@@ -2,6 +2,11 @@
 
 Api para cadastros de toneios, etapas e pontuações
 
+## Start
+
+- Instalar depedencias: `yarn`
+- Iniciar o projeto: `yarn dev`
+
 ## Endpoints
 
 - http://localhost:3333/users **POST**
@@ -23,5 +28,8 @@ teste-invillia-node.postman_collection.json
 
 ### OBS
 
+Usei o banco de dados sqlite, para não precisar de nenhuma instalação ou configuração adicional.
+
 Projeto incompleto ao final das duas horas, faltou a logica de retorna o ranqueamento do torneio.
-O projeto sera continuado na branch extra e sera computado o tempo total nessa branch para finalizar todos os requisitos
+
+O projeto sera continuado na branch extra e sera computado o tempo total nessa branch para finalizar todos os requisitos.
