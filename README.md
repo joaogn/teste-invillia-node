@@ -21,10 +21,21 @@ Api para cadastros de toneios, etapas e pontuações
 - http://localhost:3333/positions **POST**
 
 - http://localhost:3333/steprank/:stepId **GET**
+- http://localhost:3333/tournamentrank/:tournamentId **POST**
 
 Para mais detalhes dos endpoints esta no arquivo postman
 
 teste-invillia-node.postman_collection.json
+
+## TODO
+
+- ~~Terminar a rota tournamentrank~~
+- Melhorar os retornos das rotas de ranking trazendo a etapa e o torneio
+- Criar middlewares de validação com yup
+- Criar Validação com JWT
+- Criar Teste
+- Criar Documentação de Rotas
+- Concertar o erro de lint do sequelize
 
 ### OBS
 
