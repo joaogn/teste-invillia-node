@@ -6,6 +6,39 @@
 	},
 	"item": [
 		{
+			"name": "Sessions",
+			"item": [
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"email\":\"joao@gmail.com\",\n\t\"password\":\"123456\"\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/sessions",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"sessions"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
 			"name": "Users",
 			"item": [
 				{
@@ -22,7 +55,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n\t\"name\":\"Joao3\",\n\t\"email\":\"joao3@gmail.com\",\n\t\"password\":\"123456\"\n}"
+							"raw": "{\n\t\"name\":\"Joao\",\n\t\"email\":\"joao@gmail.com\",\n\t\"password\":\"123456\",\n\t\"organizer\": true\n}"
 						},
 						"url": {
 							"raw": "{{base_url}}/users",
@@ -44,7 +77,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiaWF0IjoxNTY2MzUzMzc3LCJleHAiOjE1NjY5NTgxNzd9.EKfmpCmGOaWywlarUNU6y94ShO37PuaVMzE01FOBQ58",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNTY4NDcyMTQ4LCJleHAiOjE1NjkwNzY5NDh9.36GMS3GkFAT3ETLcEvf4TVnYPaOgBaU_S-VCuGnsReQ",
 									"type": "string"
 								}
 							]
@@ -78,6 +111,16 @@
 				{
 					"name": "Create",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNTY4NDcyNDU5LCJleHAiOjE1NjkwNzcyNTl9.3QIlK1CgTO9JYyiTcoBf9gXmijlnNZS1w1JilYAJIaE",
+									"type": "string"
+								}
+							]
+						},
 						"method": "POST",
 						"header": [
 							{
@@ -111,7 +154,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiaWF0IjoxNTY2MzUzMzc3LCJleHAiOjE1NjY5NTgxNzd9.EKfmpCmGOaWywlarUNU6y94ShO37PuaVMzE01FOBQ58",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNTY4NDE4MDAyLCJleHAiOjE1NjkwMjI4MDJ9.9iG1MG3RNQQKIagsvHVHQOALt3kIOLAnMLvtKBdNn50",
 									"type": "string"
 								}
 							]
@@ -145,6 +188,16 @@
 				{
 					"name": "Create",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNTY4NDcyNjI5LCJleHAiOjE1NjkwNzc0Mjl9.NP72WvMryeQr2IFc8RPr144JY5Xj13HJ2wy645D7JSY",
+									"type": "string"
+								}
+							]
+						},
 						"method": "POST",
 						"header": [
 							{
@@ -156,7 +209,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n\t\"name\":\"Etapa 2\",\n\t\"tournament_id\": 1\n}"
+							"raw": "{\n\t\"name\":\"Etapa 1\",\n\t\"tournament_id\": 1\n}"
 						},
 						"url": {
 							"raw": "{{base_url}}/steps",
@@ -178,7 +231,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiaWF0IjoxNTY2MzUzMzc3LCJleHAiOjE1NjY5NTgxNzd9.EKfmpCmGOaWywlarUNU6y94ShO37PuaVMzE01FOBQ58",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiaWF0IjoxNTY4NDE5MTY4LCJleHAiOjE1NjkwMjM5Njh9.uwep7eQTMYN9Grn74gbUaJW9fuRtM2tAAHbc8tnAqpU",
 									"type": "string"
 								}
 							]
@@ -219,6 +272,16 @@
 				{
 					"name": "Create",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNTY4NDIwNDM5LCJleHAiOjE1NjkwMjUyMzl9.h9Va_OGamgU_hXulYPiIb8gmcpayLFqBsyHWh0gZoiQ",
+									"type": "string"
+								}
+							]
+						},
 						"method": "POST",
 						"header": [
 							{
@@ -230,15 +293,22 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n\t\"user_id\": 3,\n\t\"step_id\": 2,\n\t\"position\": 3\n}"
+							"raw": "[\n\t\n\t{\n\t\t\"user_id\": 1,\n\t\t\"position\": 1\n\t},\n\t{\n\t\t\"user_id\": 2,\n\t\t\"position\": 2\n\t},\n\t{\n\t\t\"user_id\": 3,\n\t\t\"position\": 3\n\t}\n]"
 						},
 						"url": {
-							"raw": "{{base_url}}/positions",
+							"raw": "{{base_url}}/positions/:stepId",
 							"host": [
 								"{{base_url}}"
 							],
 							"path": [
-								"positions"
+								"positions",
+								":stepId"
+							],
+							"variable": [
+								{
+									"key": "stepId",
+									"value": "1"
+								}
 							]
 						}
 					},
