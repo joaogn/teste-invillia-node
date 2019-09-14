@@ -31,7 +31,9 @@ class TournamentController {
 
   async index(req: Request, res: Response) {
     const tournaments = await Tournament.findAll();
-    return res.status(200).json(tournaments);
+    return res
+      .status(200)
+      .json(tournaments.map(({ id, name }) => ({ id, name })));
   }
 }
 

@@ -21,7 +21,14 @@ class UserController {
 
   async index(req: Request, res: Response) {
     const users = await User.findAll();
-    return res.status(200).json(users);
+    return res.status(200).json(
+      users.map(({ id, name, email, organizer }) => ({
+        id,
+        name,
+        email,
+        organizer,
+      }))
+    );
   }
 }
 

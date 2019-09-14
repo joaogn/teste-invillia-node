@@ -76,6 +76,21 @@ describe('POST /steps', () => {
     });
   });
 
+  it("should return { error: 'This tournament not exists.' }", async () => {
+    const newStep = {
+      name: 'New Step',
+      tournament_id: 5,
+    };
+    const response = await request(app)
+      .post('/steps')
+      .set('Content-Type', 'application/json')
+      .set('Authorization', `Bearer ${token}`)
+      .send(newStep);
+    expect(response.body).toEqual({
+      error: 'This tournament not exists.',
+    });
+  });
+
   it("should return { error: 'Step already exists.' }", async () => {
     const response = await request(app)
       .post('/steps')

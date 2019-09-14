@@ -1,9 +1,13 @@
 {
   "scripts": {
     "dev": "nodemon src/server.ts",
-    "pretest": "sequelize db:migrate",
-    "test": "jest --runInBand",
-    "posttest": "sequelize db:migrate:undo:all"
+    "cleardb": "sequelize db:migrate:undo:all",
+    "createdb": "sequelize db:migrate",
+    "build": "gulp",
+    "start": "node dist/server.js",
+    "pretest": "NODE_ENV=test sequelize db:migrate",
+    "test": "NODE_ENV=test jest --runInBand",
+    "posttest": "NODE_ENV=test sequelize db:migrate:undo:all"
   },
   "devDependencies": {
     "@types/bcryptjs": "^2.4.2",
@@ -24,6 +28,9 @@
     "eslint-plugin-import": "^2.18.2",
     "eslint-plugin-jest": "^22.17.0",
     "eslint-plugin-prettier": "^3.1.0",
+    "gulp": "^4.0.2",
+    "gulp-clean": "^0.4.0",
+    "gulp-typescript": "^5.0.1",
     "jest": "^24.9.0",
     "nodemon": "^1.19.2",
     "prettier": "^1.18.2",
@@ -31,6 +38,7 @@
     "sucrase": "^3.10.1",
     "supertest": "^4.0.2",
     "ts-jest": "^24.1.0",
+    "ts-node": "^8.3.0",
     "typescript": "^3.6.3"
   },
   "dependencies": {

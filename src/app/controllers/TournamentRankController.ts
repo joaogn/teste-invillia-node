@@ -24,7 +24,6 @@ class TournamentRankController {
       attributes: ['id', 'name'],
     });
 
-    console.log(steps);
     const stepsPoints = steps.map(async item => {
       const positions = await Position.findAll({
         where: { step_id: item.id },

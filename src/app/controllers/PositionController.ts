@@ -37,6 +37,22 @@ class PositionController {
         .status(400)
         .json({ error: 'Positions for this step already exists.' });
     }
+
+    let userExist = true;
+
+    const verifyUserExist = data.map(async item => {
+      const user = await User.findByPk(item.user_id);
+      if (!user) {
+        userExist = false;
+      }
+    });
+
+    await Promise.all(verifyUserExist);
+
+    if (!userExist) {
+      return res.status(400).json({ error: 'Some user does not exist' });
+    }
+
     const createPositions = data.map(async item => {
       const { user_id, step_id, position } = await Position.create({
         user_id: item.user_id,

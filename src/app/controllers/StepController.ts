@@ -22,6 +22,12 @@ class StepController {
         .json({ error: 'You can only create step with organizer' });
     }
 
+    const tournamentExist = await Tournament.findByPk(data.tournament_id);
+
+    if (!tournamentExist) {
+      return res.status(400).json({ error: 'This tournament not exists.' });
+    }
+
     const stepExist = await Step.findOne({
       where: { name: data.name, tournament_id: data.tournament_id },
     });
@@ -50,7 +56,11 @@ class StepController {
         },
       ],
     });
-    return res.status(200).json(steps);
+    return res
+      .status(200)
+      .json(
+        steps.map(({ id, name, tournament }) => ({ id, name, tournament }))
+      );
   }
 }
 

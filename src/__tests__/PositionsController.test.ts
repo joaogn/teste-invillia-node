@@ -136,6 +136,31 @@ describe('POST /positions/:stepId', () => {
     });
   });
 
+  it("should return { error: 'Some user does not exist' }", async () => {
+    const newPositions = [
+      {
+        user_id: defaultUser.id,
+        position: 1,
+      },
+      {
+        user_id: defaultUser2.id,
+        position: 2,
+      },
+      {
+        user_id: 3,
+        position: 3,
+      },
+    ];
+    const response = await request(app)
+      .post(`/positions/${defaultStep2.id}`)
+      .set('Content-Type', 'application/json')
+      .set('Authorization', `Bearer ${token}`)
+      .send(newPositions);
+    expect(response.body).toEqual({
+      error: 'Some user does not exist',
+    });
+  });
+
   it("should return { error: 'User is Required' }", async () => {
     const newPositions = [
       {
