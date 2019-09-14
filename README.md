@@ -49,6 +49,39 @@ Por exemplo, em alguma etapa participaram 8 jogadores, o ranking da etapa ficari
 
 ## Endpoints
 
+### Session
+
+**Dados Enviados**
+
+```json
+{
+  "email": "joao@gmail.com",
+  "password": "123456"
+}
+```
+
+**Dados Retornados**
+
+```json
+{
+  "user": {
+    "id": 1,
+    "name": "Joao",
+    "email": "joao@gmail.com"
+  },
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNTY4NDgwNzc5LCJleHAiOjE1NjkwODU1Nzl9.rBJ2gazkobfkw31al-jGPv9H-DyPfJl4LgxjTmxJ_mU"
+}
+```
+
+**Erros Esperados**
+
+```json
+ { "error": "Email is Required" } 400 Bad Request
+ { "error": "Password is Required" } 400 Bad Request
+ { "error": "User not found" } 400 Bad Request
+ { "error": "Password does not match" } 400 Bad Request
+```
+
 ### Cadastrar Usuário
 
 http://localhost:3333/users **POST**
