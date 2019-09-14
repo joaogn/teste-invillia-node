@@ -13,6 +13,8 @@ class User extends Model {
 
   public password_hash!: string;
 
+  public organizer!: boolean;
+
   public readonly created_at!: Date;
 
   public readonly updated_at!: Date;
@@ -28,6 +30,7 @@ User.init(
     email: Sequelize.STRING,
     password: Sequelize.VIRTUAL,
     password_hash: Sequelize.STRING,
+    organizer: Sequelize.BOOLEAN,
   },
   {
     tableName: 'users',

@@ -1,5 +1,6 @@
 import { Request, Response } from 'express';
 import Tournament from '../models/Tournament';
+import User from '../models/User';
 
 export interface TournamentType {
   name?: string;
@@ -8,6 +9,16 @@ export interface TournamentType {
 class TournamentController {
   async store(req: Request, res: Response) {
     const data: TournamentType = req.body;
+    const isOrganizer = await User.findOne({
+      where: { id: req.userId, organizer: true },
+    });
+
+    if (!isOrganizer) {
+      return res
+        .status(401)
+        .json({ error: 'You can only create tournament with organizer' });
+    }
+
     const tournamentExist = await Tournament.findOne({
       where: { name: data.name },
     });

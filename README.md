@@ -47,10 +47,10 @@ teste-invillia-node.postman_collection.json
 ## TODO
 
 - ~~Terminar a rota tournamentrank~~
-- Melhorar os retornos das rotas de ranking trazendo a etapa e o torneio
-- Criar Validação com JWT
-- Refatorar o Model de usuario para definir se é organizador ou não.
-- Refatorar os Controller de criar torneio etapa e pontuação para só o organizador alterar
+- ~~Melhorar os retornos das rotas de ranking trazendo a etapa e o torneio~~
+- ~~Criar Validação com JWT~~
+- ~~Refatorar o Model de usuario para definir se é organizador ou não.~~
+- ~~Refatorar os Controller de criar torneio etapa e pontuação para só o organizador alterar~~
 - Criar middlewares de validação com yup
 - Criar Teste
 - Criar Documentação de Rotas

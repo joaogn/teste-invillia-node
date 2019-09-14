@@ -1,25 +1,46 @@
 import { Request, Response } from 'express';
 import Position from '../models/Position';
+import User from '../models/User';
 
 export interface TournamentType {
   user_id: number;
-  step_id: number;
   position: number;
 }
 
 class PositionController {
   async store(req: Request, res: Response) {
-    const data: TournamentType = req.body;
+    const data: TournamentType[] = req.body;
+    const { stepId } = req.params;
+
+    const isOrganizer = await User.findOne({
+      where: { id: req.userId, organizer: true },
+    });
+
+    if (!isOrganizer) {
+      return res
+        .status(401)
+        .json({ error: 'You can only create positions with organizer' });
+    }
+
     const stepExist = await Position.findOne({
-      where: { user_id: data.user_id, step_id: data.step_id },
+      where: { step_id: stepId },
     });
     if (stepExist) {
       return res
         .status(400)
-        .json({ error: 'Position for this user is this step already exists.' });
+        .json({ error: 'Positions for this step already exists.' });
     }
-    const { user_id, step_id, position } = await Position.create(data);
-    return res.status(200).json({ user_id, step_id, position });
+    const createPositions = data.map(async item => {
+      const { user_id, step_id, position } = await Position.create({
+        user_id: item.user_id,
+        step_id: Number(stepId),
+        position: item.position,
+      });
+
+      return { user_id, step_id, position };
+    });
+    const result = await Promise.all(createPositions);
+    return res.status(200).json(result);
   }
 }
 
