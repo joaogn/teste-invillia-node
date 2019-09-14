@@ -10,14 +10,14 @@ A pontuação é feita na ordem inversa, onde o primeiro lugar ganha a pontuaç�
 
 Por exemplo, em alguma etapa participaram 8 jogadores, o ranking da etapa ficaria assim:
 
-1° Lugar - 8 pontos
-2° Lugar - 7 pontos
-3° Lugar - 6 pontos
-4° Lugar - 5 pontos
-5° Lugar - 4 pontos
-6° Lugar - 3 pontos
-7° Lugar - 2 pontos
-8° Lugar - 1 pontos
+- 1° Lugar - 8 pontos
+- 2° Lugar - 7 pontos
+- 3° Lugar - 6 pontos
+- 4° Lugar - 5 pontos
+- 5° Lugar - 4 pontos
+- 6° Lugar - 3 pontos
+- 7° Lugar - 2 pontos
+- 8° Lugar - 1 pontos
 
 ## Start
 
@@ -51,7 +51,7 @@ teste-invillia-node.postman_collection.json
 - ~~Criar Validação com JWT~~
 - ~~Refatorar o Model de usuario para definir se é organizador ou não.~~
 - ~~Refatorar os Controller de criar torneio etapa e pontuação para só o organizador alterar~~
-- Criar middlewares de validação com yup
+- ~~Criar middlewares de validação com yup~~
 - Criar Teste
 - Criar Documentação de Rotas
 - Concertar o erro de lint do sequelize
@@ -63,3 +63,5 @@ Usei o banco de dados sqlite, para não precisar de nenhuma instalação ou conf
 Projeto incompleto ao final das duas horas, faltou a logica de retorna o ranqueamento do torneio.
 
 O projeto sera continuado na branch extra e sera computado o tempo total nessa branch para finalizar todos os requisitos.
+
+Contabilidade hora total 2h + 30min + 4h 30min

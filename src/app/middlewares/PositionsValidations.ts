@@ -15,7 +15,7 @@ export const PositionsStoreValidation = async (
     .of(
       Yup.object({
         user_id: Yup.number().required('User is Required'),
-        position: Yup.number().required('Number is Required'),
+        position: Yup.number().required('Position is Required'),
       })
     )
     .test(

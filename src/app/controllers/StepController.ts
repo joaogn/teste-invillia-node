@@ -19,7 +19,7 @@ class StepController {
     if (!isOrganizer) {
       return res
         .status(401)
-        .json({ error: 'You can only create tournament with organizer' });
+        .json({ error: 'You can only create step with organizer' });
     }
 
     const stepExist = await Step.findOne({
