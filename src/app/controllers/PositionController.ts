@@ -2,14 +2,14 @@ import { Request, Response } from 'express';
 import Position from '../models/Position';
 import User from '../models/User';
 
-export interface TournamentType {
+export interface PositionType {
   user_id: number;
   position: number;
 }
 
 class PositionController {
   async store(req: Request, res: Response) {
-    const data: TournamentType[] = req.body;
+    const data: PositionType[] = req.body;
     const { stepId } = req.params;
 
     const isOrganizer = await User.findOne({
