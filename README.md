@@ -52,7 +52,8 @@ teste-invillia-node.postman_collection.json
 - ~~Refatorar o Model de usuario para definir se é organizador ou não.~~
 - ~~Refatorar os Controller de criar torneio etapa e pontuação para só o organizador alterar~~
 - ~~Criar middlewares de validação com yup~~
-- Criar Teste
+- ~~Criar Teste~~
+- ~~Criar validaçẽos de parametros nos controller~~
 - Criar Documentação de Rotas
 - Concertar o erro de lint do sequelize
 

@@ -114,6 +114,17 @@ describe('POST /positions/:stepId', () => {
     });
   });
 
+  it("should return { error: 'This step not exists.' }", async () => {
+    const response = await request(app)
+      .post('/positions/100')
+      .set('Content-Type', 'application/json')
+      .set('Authorization', `Bearer ${token}`)
+      .send(defaultPositions);
+    expect(response.body).toEqual({
+      error: 'This step not exists.',
+    });
+  });
+
   it("should return { error: 'Positions for this step already exists.' }", async () => {
     const response = await request(app)
       .post(`/positions/${defaultStep.id}`)

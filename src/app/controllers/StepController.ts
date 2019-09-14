@@ -34,6 +34,12 @@ class StepController {
 
   async index(req: Request, res: Response) {
     const { tournamentId } = req.params;
+    const tournamentExist = await Tournament.findByPk(tournamentId);
+
+    if (!tournamentExist) {
+      return res.status(400).json({ error: 'This tournament not exists.' });
+    }
+
     const steps = await Step.findAll({
       where: { tournament_id: tournamentId },
       include: [

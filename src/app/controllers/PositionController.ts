@@ -1,6 +1,7 @@
 import { Request, Response } from 'express';
 import Position from '../models/Position';
 import User from '../models/User';
+import Step from '../models/Step';
 
 export interface PositionType {
   user_id: number;
@@ -12,6 +13,12 @@ class PositionController {
     const data: PositionType[] = req.body;
     const { stepId } = req.params;
 
+    const stepExist = await Step.findByPk(stepId);
+
+    if (!stepExist) {
+      return res.status(400).json({ error: 'This step not exists.' });
+    }
+
     const isOrganizer = await User.findOne({
       where: { id: req.userId, organizer: true },
     });
@@ -22,10 +29,10 @@ class PositionController {
         .json({ error: 'You can only create positions with organizer' });
     }
 
-    const stepExist = await Position.findOne({
+    const stepPositionsExist = await Position.findOne({
       where: { step_id: stepId },
     });
-    if (stepExist) {
+    if (stepPositionsExist) {
       return res
         .status(400)
         .json({ error: 'Positions for this step already exists.' });

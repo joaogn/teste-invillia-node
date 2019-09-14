@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1568468086645" clover="3.2.0">
-  <project timestamp="1568468086645" name="All files">
-    <metrics statements="266" coveredstatements="266" conditionals="28" coveredconditionals="27" methods="71" coveredmethods="71" elements="365" coveredelements="364" complexity="0" loc="266" ncloc="266" packages="6" files="24" classes="24"/>
+<coverage generated="1568469867521" clover="3.2.0">
+  <project timestamp="1568469867521" name="All files">
+    <metrics statements="273" coveredstatements="273" conditionals="32" coveredconditionals="31" methods="71" coveredmethods="71" elements="376" coveredelements="375" complexity="0" loc="273" ncloc="273" packages="6" files="24" classes="24"/>
     <package name="src">
       <metrics statements="39" coveredstatements="39" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
       <file name="app.ts" path="/home/joao/Documentos/Projetos/teste-invilia-node/src/app.ts">
@@ -51,25 +51,29 @@
       </file>
     </package>
     <package name="src.app.controllers">
-      <metrics statements="114" coveredstatements="114" conditionals="24" coveredconditionals="24" methods="21" coveredmethods="21"/>
+      <metrics statements="121" coveredstatements="121" conditionals="28" coveredconditionals="28" methods="21" coveredmethods="21"/>
       <file name="PositionController.ts" path="/home/joao/Documentos/Projetos/teste-invilia-node/src/app/controllers/PositionController.ts">
-        <metrics statements="16" coveredstatements="16" conditionals="4" coveredconditionals="4" methods="3" coveredmethods="3"/>
+        <metrics statements="20" coveredstatements="20" conditionals="6" coveredconditionals="6" methods="3" coveredmethods="3"/>
         <line num="2" count="8" type="stmt"/>
         <line num="3" count="8" type="stmt"/>
-        <line num="12" count="3" type="stmt"/>
-        <line num="13" count="3" type="stmt"/>
-        <line num="15" count="3" type="stmt"/>
-        <line num="19" count="3" type="cond" truecount="2" falsecount="0"/>
-        <line num="20" count="1" type="stmt"/>
-        <line num="25" count="2" type="stmt"/>
-        <line num="28" count="2" type="cond" truecount="2" falsecount="0"/>
-        <line num="29" count="1" type="stmt"/>
-        <line num="33" count="2" type="stmt"/>
-        <line num="34" count="2" type="stmt"/>
+        <line num="4" count="8" type="stmt"/>
+        <line num="13" count="4" type="stmt"/>
+        <line num="14" count="4" type="stmt"/>
+        <line num="16" count="4" type="stmt"/>
+        <line num="18" count="4" type="cond" truecount="2" falsecount="0"/>
+        <line num="19" count="1" type="stmt"/>
+        <line num="22" count="3" type="stmt"/>
+        <line num="26" count="3" type="cond" truecount="2" falsecount="0"/>
+        <line num="27" count="1" type="stmt"/>
+        <line num="32" count="2" type="stmt"/>
+        <line num="35" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="36" count="1" type="stmt"/>
         <line num="40" count="2" type="stmt"/>
-        <line num="42" count="1" type="stmt"/>
-        <line num="43" count="1" type="stmt"/>
-        <line num="47" count="8" type="stmt"/>
+        <line num="41" count="2" type="stmt"/>
+        <line num="47" count="2" type="stmt"/>
+        <line num="49" count="1" type="stmt"/>
+        <line num="50" count="1" type="stmt"/>
+        <line num="54" count="8" type="stmt"/>
       </file>
       <file name="SessionController.ts" path="/home/joao/Documentos/Projetos/teste-invilia-node/src/app/controllers/SessionController.ts">
         <metrics statements="12" coveredstatements="12" conditionals="4" coveredconditionals="4" methods="1" coveredmethods="1"/>
@@ -87,7 +91,7 @@
         <line num="34" count="8" type="stmt"/>
       </file>
       <file name="StepController.ts" path="/home/joao/Documentos/Projetos/teste-invilia-node/src/app/controllers/StepController.ts">
-        <metrics statements="16" coveredstatements="16" conditionals="4" coveredconditionals="4" methods="2" coveredmethods="2"/>
+        <metrics statements="19" coveredstatements="19" conditionals="6" coveredconditionals="6" methods="2" coveredmethods="2"/>
         <line num="2" count="8" type="stmt"/>
         <line num="3" count="8" type="stmt"/>
         <line num="4" count="8" type="stmt"/>
@@ -100,10 +104,13 @@
         <line num="29" count="1" type="stmt"/>
         <line num="31" count="1" type="stmt"/>
         <line num="32" count="1" type="stmt"/>
-        <line num="36" count="1" type="stmt"/>
-        <line num="37" count="1" type="stmt"/>
-        <line num="47" count="1" type="stmt"/>
-        <line num="51" count="8" type="stmt"/>
+        <line num="36" count="2" type="stmt"/>
+        <line num="37" count="2" type="stmt"/>
+        <line num="39" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="40" count="1" type="stmt"/>
+        <line num="43" count="1" type="stmt"/>
+        <line num="53" count="1" type="stmt"/>
+        <line num="57" count="8" type="stmt"/>
       </file>
       <file name="StepRankController.ts" path="/home/joao/Documentos/Projetos/teste-invilia-node/src/app/controllers/StepRankController.ts">
         <metrics statements="15" coveredstatements="15" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="2"/>
@@ -194,16 +201,16 @@
         <metrics statements="14" coveredstatements="14" conditionals="0" coveredconditionals="0" methods="12" coveredmethods="12"/>
         <line num="2" count="8" type="stmt"/>
         <line num="9" count="8" type="stmt"/>
-        <line num="13" count="8" type="stmt"/>
-        <line num="14" count="8" type="stmt"/>
-        <line num="27" count="16" type="stmt"/>
-        <line num="28" count="16" type="stmt"/>
-        <line num="36" count="16" type="stmt"/>
-        <line num="37" count="16" type="stmt"/>
-        <line num="40" count="8" type="stmt"/>
-        <line num="44" count="8" type="stmt"/>
-        <line num="47" count="4" type="stmt"/>
-        <line num="50" count="3" type="stmt"/>
+        <line num="13" count="9" type="stmt"/>
+        <line num="14" count="9" type="stmt"/>
+        <line num="27" count="18" type="stmt"/>
+        <line num="28" count="18" type="stmt"/>
+        <line num="36" count="18" type="stmt"/>
+        <line num="37" count="18" type="stmt"/>
+        <line num="40" count="9" type="stmt"/>
+        <line num="44" count="9" type="stmt"/>
+        <line num="47" count="5" type="stmt"/>
+        <line num="50" count="4" type="stmt"/>
         <line num="53" count="1" type="stmt"/>
         <line num="57" count="4" type="stmt"/>
       </file>
@@ -237,10 +244,10 @@
         <line num="17" count="3" type="stmt"/>
         <line num="20" count="2" type="stmt"/>
         <line num="24" count="8" type="stmt"/>
-        <line num="28" count="2" type="stmt"/>
-        <line num="29" count="2" type="stmt"/>
-        <line num="35" count="2" type="stmt"/>
-        <line num="38" count="1" type="stmt"/>
+        <line num="28" count="3" type="stmt"/>
+        <line num="29" count="3" type="stmt"/>
+        <line num="35" count="3" type="stmt"/>
+        <line num="38" count="2" type="stmt"/>
         <line num="41" count="1" type="stmt"/>
       </file>
       <file name="TournamentRankValidations.ts" path="/home/joao/Documentos/Projetos/teste-invilia-node/src/app/middlewares/TournamentRankValidations.ts">
@@ -278,15 +285,15 @@
         <line num="2" count="8" type="stmt"/>
         <line num="3" count="8" type="stmt"/>
         <line num="4" count="8" type="stmt"/>
-        <line num="6" count="23" type="stmt"/>
-        <line num="7" count="23" type="stmt"/>
-        <line num="9" count="23" type="cond" truecount="2" falsecount="0"/>
+        <line num="6" count="25" type="stmt"/>
+        <line num="7" count="25" type="stmt"/>
+        <line num="9" count="25" type="cond" truecount="2" falsecount="0"/>
         <line num="10" count="1" type="stmt"/>
-        <line num="13" count="22" type="stmt"/>
-        <line num="15" count="22" type="stmt"/>
-        <line num="17" count="22" type="stmt"/>
-        <line num="18" count="21" type="stmt"/>
-        <line num="19" count="21" type="stmt"/>
+        <line num="13" count="24" type="stmt"/>
+        <line num="15" count="24" type="stmt"/>
+        <line num="17" count="24" type="stmt"/>
+        <line num="18" count="23" type="stmt"/>
+        <line num="19" count="23" type="stmt"/>
         <line num="21" count="1" type="stmt"/>
       </file>
     </package>
@@ -328,9 +335,9 @@
         <line num="3" count="8" type="stmt"/>
         <line num="23" count="2" type="stmt"/>
         <line num="27" count="8" type="stmt"/>
-        <line num="42" count="57" type="stmt"/>
-        <line num="43" count="57" type="cond" truecount="1" falsecount="1"/>
-        <line num="44" count="57" type="stmt"/>
+        <line num="42" count="60" type="stmt"/>
+        <line num="43" count="60" type="cond" truecount="1" falsecount="1"/>
+        <line num="44" count="60" type="stmt"/>
         <line num="48" count="8" type="stmt"/>
       </file>
     </package>

@@ -128,4 +128,14 @@ describe('Get /steps/:tournamentId', () => {
       error: 'Params tournamentId need to be number',
     });
   });
+
+  it("should return { error: 'This tournament not exists.' }", async () => {
+    const response = await request(app)
+      .get('/steps/100')
+      .set('Content-Type', 'application/json')
+      .set('Authorization', `Bearer ${token}`);
+    expect(response.body).toEqual({
+      error: 'This tournament not exists.',
+    });
+  });
 });
