@@ -2,10 +2,9 @@ module.exports = {
   env: {
     es6: true,
     node: true,
+    jest: true,
   },
-  extends: [
-    'airbnb-base','prettier'
-  ],
+  extends: ['airbnb-base', 'prettier'],
   globals: {
     Atomics: 'readonly',
     SharedArrayBuffer: 'readonly',
@@ -15,9 +14,7 @@ module.exports = {
     ecmaVersion: 2018,
     sourceType: 'module',
   },
-  plugins: [
-    '@typescript-eslint','prettier'
-  ],
+  plugins: ['@typescript-eslint', 'prettier', 'jest'],
   rules: {
     'prettier/prettier': 'error',
     'import/no-unresolved': 'off',
