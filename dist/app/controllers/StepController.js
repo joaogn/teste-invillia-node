@@ -50,6 +50,7 @@ class StepController {
             }
             const steps = yield Step_1.default.findAll({
                 where: { tournament_id: tournamentId },
+                attributes: ['id', 'name'],
                 include: [
                     {
                         model: Tournament_1.default,
@@ -58,9 +59,7 @@ class StepController {
                     },
                 ],
             });
-            return res
-                .status(200)
-                .json(steps.map(({ id, name, tournament }) => ({ id, name, tournament })));
+            return res.status(200).json(steps);
         });
     }
 }

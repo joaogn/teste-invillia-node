@@ -30,10 +30,10 @@ class TournamentController {
   }
 
   async index(req: Request, res: Response) {
-    const tournaments = await Tournament.findAll();
-    return res
-      .status(200)
-      .json(tournaments.map(({ id, name }) => ({ id, name })));
+    const tournaments = await Tournament.findAll({
+      attributes: ['id', 'name'],
+    });
+    return res.status(200).json(tournaments);
   }
 }
 

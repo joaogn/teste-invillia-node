@@ -38,10 +38,10 @@ class TournamentController {
     }
     index(req, res) {
         return __awaiter(this, void 0, void 0, function* () {
-            const tournaments = yield Tournament_1.default.findAll();
-            return res
-                .status(200)
-                .json(tournaments.map(({ id, name }) => ({ id, name })));
+            const tournaments = yield Tournament_1.default.findAll({
+                attributes: ['id', 'name'],
+            });
+            return res.status(200).json(tournaments);
         });
     }
 }

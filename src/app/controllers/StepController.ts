@@ -48,6 +48,7 @@ class StepController {
 
     const steps = await Step.findAll({
       where: { tournament_id: tournamentId },
+      attributes: ['id', 'name'],
       include: [
         {
           model: Tournament,
@@ -56,11 +57,7 @@ class StepController {
         },
       ],
     });
-    return res
-      .status(200)
-      .json(
-        steps.map(({ id, name, tournament }) => ({ id, name, tournament }))
-      );
+    return res.status(200).json(steps);
   }
 }
 

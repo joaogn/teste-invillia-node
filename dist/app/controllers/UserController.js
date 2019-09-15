@@ -27,13 +27,10 @@ class UserController {
     }
     index(req, res) {
         return __awaiter(this, void 0, void 0, function* () {
-            const users = yield User_1.default.findAll();
-            return res.status(200).json(users.map(({ id, name, email, organizer }) => ({
-                id,
-                name,
-                email,
-                organizer,
-            })));
+            const users = yield User_1.default.findAll({
+                attributes: ['id', 'name', 'email', 'organizer'],
+            });
+            return res.status(200).json(users);
         });
     }
 }
